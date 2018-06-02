@@ -7,6 +7,13 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+//Mongoose OCM...
+var mongoose = require('mongoose');
+
+//Connect to MongoDB...
+mongoose.connect('mongodb://localhost/test');
+
+
 var app = express();
 
 //assign the swig view engine to .html files..
